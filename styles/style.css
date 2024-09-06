@@ -89,6 +89,9 @@ header > .logo img {
     width: 136px;
     margin: 0 auto;
 }
+header > .logo a {
+    border-bottom: none;
+}
 
 header > .contacts {
     letter-spacing: .01px;
