@@ -30,8 +30,8 @@ header {
   font-size: 18px;
 }
 
-header > .menu {
-  padding-left: 26.52px;
+.header-menu {
+  margin-left: 26.52px;
   padding-top: 92px;
 
   width: 100%;
@@ -42,64 +42,57 @@ header > .menu {
   align-items: center;
 }
 
-header > .menu a {
-  padding-left: 32.5px;
+.header-menu a {
+  padding-left: 0;
   text-decoration: none;
 
-  background: url(../images/circle.svg) no-repeat 14px;
-  background-size: 9px;
-  background-position: 14px 0px;
+  margin-left: 32px;
+
+  list-style-type: circle;
+  display: list-item;
 
   border-bottom: 0;
-  margin-top: 6px;
+  margin-top: 3px;
 }
 
-header > .menu a:after {
-  content: "";
-  height: 1px;
-  background: #000;
-  display: block;
-  margin-top: 5px;
-}
-
-header > .menu a:hover:after {
+.header-menu a:hover:after {
   background: #fff;
 }
 
-header > .menu :first-child {
-  padding-left: 0;
-  background: none;
+.header-menu :first-child {
+  margin-left: 0;
+  list-style-type: none;
 }
 
-header > .menu a:first-child:after {
+.header-menu a:first-child:after {
   height: 0;
 }
 
-header > .logo {
-  padding: 92px 0 0 39px;
+.header-logo {
+  padding: 92px 0 0 38px;
 }
 
-header > .logo img {
+.header-logo img {
   width: 136px;
   margin: 0 auto;
 }
 
-header > .logo a {
+.header-logo a {
   border-bottom: none;
 }
 
-header > .contacts {
+.header-contacts {
   letter-spacing: 0.01px;
   font-size: 18px;
   padding-top: 99px;
 }
 
-header > .contacts a,
-header > .contacts span {
+.header-contacts a,
+.header-contacts span {
   line-height: 24px;
 }
 
-main .cover {
+.cover {
   width: 100%;
   min-height: 757px;
 
@@ -109,44 +102,47 @@ main .cover {
   position: relative;
 }
 
-main .cover .title {
-  position: absolute;
+.cover-title {
+  position: relative;
   color: #fff;
   z-index: 2;
   display: block;
   width: 100%;
   height: 100%;
   padding-top: 165px;
+  margin-bottom: 77px;
+  padding-left: 50px;
+  padding-right: 20px;
 }
 
-main .cover .title .ono,
-main .cover .title .tebe,
-main .cover .title .nado {
+.word-spacing {
+  width: 30px;
+  display: inline-block;
+}
+
+.cover-title .ono,
+.cover-title .tebe,
+.cover-title .nado {
   font-size: 100px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 30px;
-  word-spacing: -23px;
+  text-align: justify;
 }
 
-main .cover .title .ono {
-  padding-left: 50px;
+.cover-title .tebe {
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 286px;
 }
 
-main .cover .title .tebe {
-  text-align: center;
-  padding-top: 9px;
-  padding-right: 27px;
-}
-
-main .cover .title .nado {
+.cover-title .nado {
   text-align: right;
-  padding-right: 19px;
+  padding-top: 4px;
 }
 
-main .cover .subline {
-  position: absolute;
-  bottom: 0;
+.cover-subline {
+  position: relative;
   color: #fff;
   z-index: 2;
   width: 100%;
@@ -159,7 +155,7 @@ main .cover .subline {
   min-height: 150px;
 }
 
-main .cover .subline .left {
+.cover-subline .left {
   text-transform: uppercase;
   width: 70%;
   padding-left: 82px;
@@ -169,34 +165,35 @@ main .cover .subline .left {
   font-size: 22px;
 }
 
-main .cover .subline .right {
+.cover-subline .right {
   text-align: left;
   width: 30%;
   padding-left: 24px;
+  padding-top: 4px;
 }
 
-main .about-lots {
+.about-lots {
   background-color: #fff;
-  padding: 179px 24px 50px;
+  padding: 180px 24px 50px;
 }
 
-main .about-lots h2 {
+.about-lots h2 {
   text-transform: uppercase;
   font-size: 40px;
   padding-left: 40px;
 }
 
-main .about-lots .lots {
+.about-lots .about-lots-items {
   display: flex;
 
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
 
-  padding-top: 26px;
+  padding-top: 27px;
 }
 
-main .about-lots .lots .lot {
+.about-lots-lot {
   width: 334px;
   min-height: 563px;
   margin-right: 25px;
@@ -204,70 +201,68 @@ main .about-lots .lots .lot {
   position: relative;
   background-size: auto 100%;
   background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: stretch;
 }
 
-main .about-lots .lots .lot1 {
+.about-lots .lot1 {
   background-image: url(../images/card-lot-01.jpg) ;
 }
-main .about-lots .lots .lot2 {
+.about-lots .lot2 {
   background-image: url(../images/card-lot-02.jpg) ;
 }
-main .about-lots .lots .lot3 {
+.about-lots .lot3 {
   background-image: url(../images/card-lot-03.jpg) ;
 }
 
 
-main .about-lots .lots .lot:nth-child(3) {
+.about-lots-lot:nth-child(3) {
   margin-right: 0;
 }
 
-main .about-lots .lots .lot img {
-  width: auto;
-  height: 100%;
-
-  margin-left: -100px;
-}
-
-main .about-lots .lots .lot .title,
-main .about-lots .lots .lot .description {
-  position: absolute;
+.about-lots-lot .title,
+.about-lots-lot .description {
+  position: relative;
   z-index: 2;
   padding: 0 40px;
   color: #fff;
 }
 
-main .about-lots .lots .lot .title {
-  top: 50px;
+.about-lots-lot .title {
+  padding-top: 51px;
   line-height: 26px;
-  word-spacing: -1px;
-
-  letter-spacing: 0.4px;
+  letter-spacing: 0.1px;
 }
 
-main .about-lots .lots .lot .title a {
+.about-lots-lot .title a {
   text-transform: uppercase;
   font-size: 22px;
   border-color: #fff;
+  font-weight: bold;
 }
 
-main .about-lots .lots .lot .description {
-  bottom: 48px;
+.about-lots-lot .description {
+  padding-bottom: 48px;
   font-size: 20px;
+  flex: 0 1 auto;
 }
 
-main .about-lots .link-all {
+.about-lots .link-all {
   padding: 6px 0 0 40px;
   font-size: 20px;
 }
 
-main .about-auction {
+.about-auction {
   display: grid;
   grid-template-columns: 334px auto;
 
   padding: 132px 24px 54px;
 }
 
-main .about-auction .logo {
+.about-auction-logo {
   width: 240px;
   height: 240px;
   border-radius: 50%;
@@ -276,7 +271,7 @@ main .about-auction .logo {
   margin: 0 auto;
 }
 
-main .about-auction .logo::before {
+.about-auction-logo::before {
   position: absolute;
 
   content: url(../images/logo-white.svg);
@@ -289,18 +284,18 @@ main .about-auction .logo::before {
   padding: 62px 46px;
 }
 
-main .about-auction .description h2 {
+.about-auction-description h2 {
   text-transform: uppercase;
   font-size: 40px;
   margin-bottom: 100px;
 }
 
-main .about-auction .description {
+.about-auction-description {
   padding-top: 98px;
   padding-left: 25px;
 }
 
-main .about-auction .description p {
+.about-auction-description p {
   font-weight: 400;
   font-size: 20px;
   margin-bottom: 26px;
@@ -315,19 +310,19 @@ footer {
   line-height: 21px;
 }
 
-footer > .contacts {
+.footer-contacts {
   letter-spacing: 0.1px;
   padding-left: 25px;
   width: auto;
 }
 
-footer > .contacts a,
-footer > .contacts span {
+.footer-contacts a,
+.footer-contacts span {
   line-height: 24px;
   height: 24px;
 }
 
-footer > .menu {
+.footer-menu {
   letter-spacing: 0.1px;
   font-size: 18px;
 
@@ -337,23 +332,23 @@ footer > .menu {
   flex-direction: column;
 }
 
-footer > .menu a {
+.footer-menu a {
   line-height: 21px;
   height: 21px;
 }
 
-footer > .social {
+.footer-social {
   display: flex;
   flex-direction: row;
   align-items: start;
 }
 
-footer > .social a {
+.footer-social a {
   border-bottom: none;
   margin-right: 48px;
 }
 
-footer > .social a img {
+.footer-social .logo {
   width: 48px;
   height: 48px;
 }
