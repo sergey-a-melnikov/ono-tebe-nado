@@ -171,6 +171,7 @@ header {
 .about-lots {
   background-color: #fff;
   padding: 180px 24px 50px;
+  display: block;
 }
 
 .about-lots h2 {
