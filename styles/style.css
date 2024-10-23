@@ -151,7 +151,6 @@ header .contacts {
   margin-top: 3px;
 }
 
-
 .cover-subline {
   position: relative;
   color: #fff;
@@ -204,11 +203,10 @@ header .contacts {
 
   margin-right: 25px;
   margin-bottom: 24px;
-}
-.about-lots-items a:nth-child(3) {
-  margin-right: 0;
-}
 
+  background-size: cover;
+  background-position: center;
+}
 
 .about-lots-lot {
   width: 334px;
@@ -222,11 +220,6 @@ header .contacts {
   align-content: stretch;
 }
 
-.about-lots-items a {
-  background-size: cover;
-  background-position: center;
-}
-
 .about-lots-items a:nth-child(1n) {
   background-image: url(../images/card-lot-01.jpg) ;
 }
@@ -235,6 +228,7 @@ header .contacts {
 }
 .about-lots-items a:nth-child(3n) {
   background-image: url(../images/card-lot-03.jpg) ;
+  margin-right: 0;
 }
 
 .about-lots-lot .title,
