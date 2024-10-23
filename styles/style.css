@@ -68,7 +68,7 @@ header {
   list-style-type: none;
 }
 
-.header-menu a.current {
+a.current {
   border-bottom: 1px solid #fff;
 }
 
