@@ -20,6 +20,8 @@ a.btn {
   display: block;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 
@@ -46,26 +48,28 @@ header {
   padding-left: 0;
   text-decoration: none;
 
-  margin-left: 32px;
+  margin-left: 33px;
 
   list-style-type: circle;
   display: list-item;
 
-  border-bottom: 0;
-  margin-top: 3px;
+  margin-top: 7px;
+
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
 }
 
-.header-menu a:hover:after {
-  background: #fff;
+.header-menu a:hover {
+  border-bottom: 1px solid #fff;
 }
 
-.header-menu :first-child {
+.header-menu a:first-child {
   margin-left: 0;
   list-style-type: none;
 }
 
-.header-menu a:first-child:after {
-  height: 0;
+.header-menu a.current {
+  border-bottom: 1px solid #fff;
 }
 
 .header-logo {
@@ -81,16 +85,21 @@ header {
   border-bottom: none;
 }
 
-.header-contacts {
+
+.contacts {
   letter-spacing: 0.01px;
   font-size: 18px;
-  padding-top: 99px;
+  width: auto;
   font-style: normal;
 }
 
-.header-contacts a,
-.header-contacts span {
+.contacts a,
+.contacts span {
   line-height: 24px;
+}
+
+header .contacts {
+  padding-top: 99px;
 }
 
 .cover {
@@ -98,7 +107,7 @@ header {
   min-height: 757px;
 
   background: url(../images/cover.jpg);
-  background-size: auto 100%;
+  background-size: cover;
   background-position: center;
   position: relative;
 }
@@ -109,9 +118,8 @@ header {
   z-index: 2;
   display: block;
   width: 100%;
-  height: 100%;
   padding-top: 165px;
-  margin-bottom: 77px;
+  margin-bottom: 139px;
   padding-left: 50px;
   padding-right: 20px;
 
@@ -131,10 +139,12 @@ header {
   display: block;
 }
 
-.cover-title .frace:nth-child(2n) {
+.cover-title .frace:nth-child(1n) {
   text-align: left;
+}
+.cover-title .frace:nth-child(2n) {
+  text-align: center;
   margin-top: 10px;
-  padding-left: 286px;
 }
 .cover-title .frace:nth-child(3n) {
   text-align: right;
@@ -151,8 +161,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: left;
-
-  min-height: 150px;
 
   text-transform: uppercase;
   padding-left: 82px;
@@ -206,8 +214,7 @@ header {
   width: 334px;
   min-height: 563px;
   position: relative;
-  background-size: auto 100%;
-  background-position: center;
+
 
   display: flex;
   flex-direction: column;
@@ -215,13 +222,18 @@ header {
   align-content: stretch;
 }
 
-.about-lots .lot1 {
+.about-lots-items a {
+  background-size: cover;
+  background-position: center;
+}
+
+.about-lots-items a:nth-child(1n) {
   background-image: url(../images/card-lot-01.jpg) ;
 }
-.about-lots .lot2 {
+.about-lots-items a:nth-child(2n) {
   background-image: url(../images/card-lot-02.jpg) ;
 }
-.about-lots .lot3 {
+.about-lots-items a:nth-child(3n) {
   background-image: url(../images/card-lot-03.jpg) ;
 }
 
@@ -277,6 +289,8 @@ header {
 
 .about-auction-logo::before {
   position: absolute;
+  top: 0;
+  left: 0;
 
   content: url(../images/logo-white.svg);
 
@@ -314,18 +328,8 @@ footer {
   line-height: 21px;
 }
 
-.footer-contacts {
-  letter-spacing: 0.1px;
-  padding-left: 25px;
-  width: auto;
-
-  font-style: normal;
-}
-
-.footer-contacts a,
-.footer-contacts span {
-  line-height: 24px;
-  height: 24px;
+footer .contacts {
+  padding-left: 26px;
 }
 
 .footer-menu {
